@@ -192,6 +192,12 @@ select option{color:#000}
 .out{display:none;white-space:pre-wrap;font:400 14px/1.5 var(--mono);background:#0A2140;border:1px dashed #6F8DB5;padding:14px;color:#E7EEF7}
 .out.on{display:block}
 .hint{font-size:13px;color:#9FB4CF}
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#06210f;border:1.5px solid #25D366;padding:14px 20px;font:600 15px/1 var(--body);text-decoration:none;cursor:pointer}
+.wa:hover{background:#1FB855;border-color:#1FB855}
+.wa svg{width:22px;height:22px;fill:currentColor;flex:none}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;padding:0;border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.wa-float svg{width:30px;height:30px}
+.wa-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 footer{padding:26px 0 40px;font-size:13px;color:var(--mute)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
@@ -220,6 +226,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <div class="cta">
         <a class="btn" href="#contact">Обсудить небольшой пилот</a>
         <a class="btn ghost" href="#demo-plan">Смотреть пример</a>
+        <a class="wa" id="wa-hero" href="https://wa.me/77053339197" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
       </div>
       <div class="facts">
         <span><b>DWG · DXF · PDF</b> на входе и выходе</span>
@@ -373,6 +380,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <h2>Расскажите, что нужно исправить</h2>
       <p>Опишите задачу в двух строках. Мы ответим, возьмём ли её в пилот, и назовём срок и цену.</p>
       <ul class="cl" id="contacts"></ul>
+      <div class="wa-row"><a class="wa" id="wa-main" href="https://wa.me/77053339197" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Написать в WhatsApp</a></div>
     </div>
     <form id="req" novalidate>
       <label for="f-co">Компания<input id="f-co" type="text" autocomplete="organization" placeholder="Название проектного бюро"></label>
@@ -387,11 +395,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <label for="f-msg">Коротко о задании<textarea id="f-msg" placeholder="Сколько листов, какой раздел, какой срок"></textarea></label>
       <button class="btn" type="submit" style="background:var(--red);border-color:var(--red)">Подготовить заявку</button>
       <div class="out" id="out" role="status"></div>
+      <a class="wa" id="wa-form" href="https://wa.me/77053339197" target="_blank" rel="noopener" style="display:none"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Отправить в WhatsApp</a>
       <button class="btn ghost sm" type="button" id="copy" style="display:none;color:#fff;border-color:#6F8DB5">Скопировать текст</button>
-      <p class="hint">Форма ничего не отправляет. Она собирает текст заявки, который можно скопировать и отправить нам по телефону или на email из списка слева.</p>
+      <p class="hint">Форма собирает текст заявки. Его можно отправить нам в WhatsApp одной кнопкой или скопировать и написать на email.</p>
     </form>
   </div>
 </div>
+
+<a class="wa wa-float" id="wa-float" href="https://wa.me/77053339197" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
 <footer>
   <div class="wrap">
@@ -404,6 +415,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 /* Контакты: заполните значения, и строки появятся на странице. */
 var CONTACTS = [
   ["Телефон", "+7 705 333 9197", "tel:+77053339197"],
+  ["WhatsApp", "+7 705 333 9197", "https://wa.me/77053339197"],
   ["Email", "syrymnigmetov1994@gmail.com", "mailto:syrymnigmetov1994@gmail.com"],
   ["География", "Казахстан", ""]
 ];
@@ -505,6 +517,14 @@ document.getElementById('svgA').innerHTML=plan(true);
   });
 })();
 
+/* WhatsApp links with prefilled text */
+var WA_NUMBER="77053339197";
+function waLink(t){return "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(t);}
+(function(){
+  var t="Здравствуйте! Хочу обсудить пилот с AI CAD Studio.";
+  ["wa-main","wa-hero","wa-float"].forEach(function(id){var a=document.getElementById(id);if(a)a.href=waLink(t);});
+})();
+
 /* request composer */
 (function(){
   var f=document.getElementById('req'),out=document.getElementById('out'),cp=document.getElementById('copy');
@@ -514,7 +534,7 @@ document.getElementById('svgA').innerHTML=plan(true);
       'Компания: '+(document.getElementById('f-co').value||'—')+'\n'+
       'Задача: '+document.getElementById('f-type').value+'\n'+
       'Детали: '+(document.getElementById('f-msg').value||'—');
-    out.textContent=t;out.classList.add('on');cp.style.display='inline-flex';
+    out.textContent=t;out.classList.add('on');cp.style.display='inline-flex';var w=document.getElementById('wa-form');w.href=waLink(t);w.style.display='inline-flex';
   });
   cp.addEventListener('click',function(){
     try{navigator.clipboard.writeText(out.textContent).then(function(){cp.textContent='Скопировано';},function(){cp.textContent='Выделите текст и скопируйте вручную';});}
